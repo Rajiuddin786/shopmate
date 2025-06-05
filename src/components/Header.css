@@ -1,0 +1,30 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    width: 100%;
+}
+
+.nav-links-wrapper {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 11px;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+.logo{
+    border-radius: 15px;
+    border: 2px solid black;
+}
+.active {
+    background-color: gray;
+    color: white;
+}
