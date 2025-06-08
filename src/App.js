@@ -1,7 +1,9 @@
-import {Routes,Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+
 import { ProductPage } from './components/ProductPage';
 import { PageNotFound } from './components/PageNotFound';
 import { CartPage } from './components/CartPage';
+import { ProductDetail } from './components/ProductDetail';
 
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
@@ -14,10 +16,11 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<ProductPage/>} />
-        <Route path="cart" element={<CartPage/>} />
-        <Route path="*" element={<PageNotFound/>} />
+        <Route path="/product/:id" element={<ProductDetail/>} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

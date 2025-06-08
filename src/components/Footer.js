@@ -1,7 +1,10 @@
 import React from 'react'
+import './Footer.css'
 
 export const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer>
+      <h2>Made by: <i>Sk Rajiuddin</i></h2>
+    </footer>
   )
 }
