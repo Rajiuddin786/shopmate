@@ -49,21 +49,7 @@ body {
   border-radius: 12px;
   object-fit: cover;
 }
-.add_to_cart {
-  background-color: #333;
-  color: #fff;
-  padding: 12px 24px;
-  font-size: 16px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
-}
 
-.add_to_cart:hover {
-  background-color: #555;
-}
 
 /* Responsive design */
 @media (max-width: 768px) {
