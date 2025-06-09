@@ -1,0 +1,22 @@
+.add_to_cart {
+  background-color: #28a745; /* green */
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add_to_cart:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.add_to_cart:active {
+  background-color: #1e7e34;
+  transform: scale(0.97);
+}
