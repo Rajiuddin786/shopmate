@@ -4,6 +4,7 @@ import './ProductPage.css';
 
 export const ProductPage = () => {
   const [products, setProducts] = useState([])
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart'))||[]);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -15,8 +16,11 @@ export const ProductPage = () => {
 
   const handleAddCart = (id) => {
     const product = products.find(product => product.id === id);
-    localStorage.setItem('cart', JSON.stringify(product));
-  }
+    const updatedCart = [...cart, product];
+    setCart(updatedCart); 
+    localStorage.setItem('cart', JSON.stringify(updatedCart)); 
+  };
+
 
   return (
     <div className="product-page">
@@ -29,7 +33,7 @@ export const ProductPage = () => {
               <p><strong>${product.price}</strong></p>
               <img src={product.image} alt={product.title} />
             </Link>
-            <button className="btn btn-primary" onClick={()=>handleAddCart(product.id)}>Add to Cart</button>
+            <button className="btn btn-primary" onClick={() => handleAddCart(product.id)}>Add to Cart</button>
           </li>
         ))}
       </ul>
